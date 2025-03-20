@@ -1,17 +1,72 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const sponsors = [
+  { name: "Warner Music México", logo: "/Portfolio_ChristianLara/src/assets/logos/image.png", url: "https://www.dosequis.mx/" },
+  { name: "American Eagle", logo: "/logos/american-eagle.png", url: "https://www.ae.com/" },
+  { name: "Banamex", logo: "/logos/banamex.png", url: "https://www.banamex.com/" },
+  { name: "Aeromexico", logo: "/logos/aeromexico.png", url: "https://www.aeromexico.com/" },
+  { name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" }
+];
+import ImageLogo from "../assets/logos/image.png";
 ---
 <Layout title="Currículum">
-  <section class="curriculum-container">
-    <h1>Currículum</h1>
-    <p>Detalles sobre mi experiencia laboral.</p>
-  </section>
-
-  <style>
-    .curriculum-container {
-      background-color: #1a1a40; /* Azul oscuro */
-      color: white;
-      padding: 20px;
-    }
-  </style>
+    <section class="sponsors-section">
+        <h2 class="font-extra-bold">¡GRACIAS POR CONFIAR EN MÍ!</h2>
+        <div class="sponsors-grid">
+          {sponsors.map((sponsor) => (
+            <a href={sponsor.url} target="_blank" class="sponsor-card">
+              <img src={ImageLogo.src} alt={sponsor.name} />
+              <p>{sponsor.url}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+      
+      <style>
+        .sponsors-section {
+          background: #ff6f00;
+          text-align: center;
+          padding: 40px;
+        }
+      
+        .sponsors-section h2 {
+          color: white;
+          font-size: 2rem;
+          margin-bottom: 20px;
+        }
+      
+        .sponsors-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 15px;
+          justify-content: center;
+        }
+      
+        .sponsor-card {
+          background: #e31c0e;
+          padding: 20px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.3s ease-in-out;
+          text-decoration: none;
+        }
+      
+        .sponsor-card img {
+          max-width: 100px;
+          height: auto;
+          margin-bottom: 10px;
+        }
+      
+        .sponsor-card p {
+          color: white;
+          font-size: 0.8rem;
+        }
+      
+        .sponsor-card:hover {
+          transform: scale(1.05);
+        }
+      </style>
 </Layout>

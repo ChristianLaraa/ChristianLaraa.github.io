@@ -1,17 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/global.css"
+import image from "../assets/image.png";
 ---
 <Layout title="Sobre Mí">
-  <section class="about-container">
-    <h1>Sobre Mí</h1>
-    <p>Información sobre mi experiencia y habilidades.</p>
-  </section>
+    <html>
 
-  <style>
+<div class = "about-container">
+        <body class="bg-black text-white">
+          <section class="flex flex-col md:flex-row items-center justify-center p-4 max-w-4xl mx-auto text-center md:text-left">
+            <!-- Texto a la izquierda -->
+            <div class="md:w-1/2">
+            <h2 class="text-4xl font-extrabold text-white">Christian Lara</h2>
+            <p class="text-orange-400 text-lg mt-2">@Full Stack Developer</p>
+            <p class="text-1xl mt-4 text-gray-100 justify-content">
+                Apasionado por el desarrollo web y la tecnología, creando experiencias digitales atractivas y funcionales.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptatibus voluptatum iste animi molestiae consequuntur, inventore qui, exercitationem, ut eaque tenetur.
+                Quidem accusamus atque vel quaerat laudantium error, dignissimos earum.
+            </p>
+                <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#" class="border-2 border-orange-500 px-4 py-2 rounded-lg text-pink-400 hover:bg-pink-500 hover:text-white transition">Github</a>
+                <a href="#" class="border-2 border-pink-500 px-4 py-2 rounded-lg text-pink-400 hover:bg-pink-500 hover:text-white transition">LinkedIn</a>
+                <a href="" class="border-2 border-pink-500 px-4 py-2 rounded-lg text-pink-400 hover:bg-pink-500 hover:text-white transition">Email</a>
+                </div>
+            </div>
+            <!-- Imagen a la derecha -->
+            <div class="md:w-1/2 flex justify-center mt-6 md:mt-0">
+                <img src={image.src} alt="Foto de perfil" class="w-65 h-65 rounded-full border-4 border-white shadow-lg" />
+            </div>
+        </section>
+        </div>
+<style>
     .about-container {
-      background-color: black;
-      color: white;
-      padding: 20px;
+        background-color: black;
+        color: white;
+        padding: 20px;
     }
-  </style>
+
+</style>
+
+</body>
+</html>
+
 </Layout>

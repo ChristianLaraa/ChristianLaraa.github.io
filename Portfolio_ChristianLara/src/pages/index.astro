@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import Landing from '../components/Landing.astro';
 import About from '../components/About.astro';
 import Proyectos from '../components/Proyectos.astro';
 import Curriculum from '../components/Curriculum.astro';
@@ -17,6 +18,11 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Portafolio - Christian Lara">
 	<main>
 		<Navbar />
+		<main
+		class="mt-16 scroll-mt-36"
+		id="home"
+	 >
+		<Landing />
 		<About />
 		<Proyectos />
 		<Curriculum />

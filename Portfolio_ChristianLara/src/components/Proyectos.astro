@@ -1,21 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-//import {socials, info} = Astro.url;
-
-const { pathname } = Astro.url;
+import { projects } from '../assets/data';
+import ProjectCard from './ProyectosCards.astro';
 
 ---
 <Layout title="Proyectos">
-  <section class="proyectos-container">
-    <h1>Proyectos</h1>
-    <p>Información sobre mis proyectos.</p>
-  </section>
+  <div
+  class="scroll-mt-36 w-[75%] mx-auto mt-20 mb-10"
+  id="projects"
+>
+  <h2 class="font-bold w-fit md:mx-0 md:ml-5 sm:text-6xl xs:text-5xl xs:mx-auto">Projects</h2>
+</div>
 
-  <style>
-    .proyectos-container {
-      background-color: rgb(0, 106, 255);
-      color: white;
-      padding: 20px;
-    }
-  </style>
+<div class="grid mx-auto gap-6 mb-8 xl:grid-cols-4 xl:w-4/5 lg:grid-cols-3 md:w-[85%] md:grid-cols-2 xs:grid-cols-1 xs:w-[90%]">
+  {
+     projects.map((card) => (
+        <ProjectCard
+           title={card.title}
+           description={card.description}
+           image={card.image}
+        />
+     ))
+  }
+</div>
 </Layout>

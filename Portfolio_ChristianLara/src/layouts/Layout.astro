@@ -1,28 +1,58 @@
 ---
 const {title} = Astro.props;
+
+import '../assets/style.css';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div>
-			<slot />
-		</div>
-	</body>
-</html>
+<html
+   lang="en"
+   class="scroll-smooth"
+>
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="description"
+         content="Astro description"
+      />
+      <meta
+         name="viewport"
+         content="width=device-width"
+      />
+      <link
+         rel="icon"
+         type="image/svg+xml"
+         href=""
+      />
+      <meta
+         name="generator"
+         content={Astro.generator}
+      />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+      <!--=============== BoxIcons ===============-->
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      />
+
+      <title>{title}</title>
+
+      <!--=============== Email JS ===============-->
+      <script
+         type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      ></script>
+
+      <script type="text/javascript">
+         emailjs.init('Zy7aUsKbfBplaYqrE');
+      </script>
+
+      <!--=============== View Transition ===============-->
+      <ViewTransitions />
+	</head>
+	<body class="bg-black text-white">
+	   <slot />
+	   <script src="../assets/index.js"></script>
+	</body>
+ </html>

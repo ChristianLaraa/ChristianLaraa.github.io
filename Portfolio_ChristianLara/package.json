@@ -12,6 +12,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.3",
+    "astro-icon": "^1.1.5",
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "solid-js": "^1.9.5",

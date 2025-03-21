@@ -9,6 +9,11 @@ import ProjectCard from '../components/ProyectosCards.astro';
     <div class="scroll-mt-36 w-[75%] mx-auto mt-20 mb-10" id="projects">
       <h2 class="font-bold w-fit md:mx-0 md:ml-5 sm:text-6xl xs:text-5xl xs:mx-auto">PROYECTOS</h2>
     </div>
+    <div class="flex justify-center space-x-4 mb-8">
+      <a href="#" class="btn-dev px-4 py-2 rounded">Desarrollo</a>
+      <a href="/src/components/Proyectos.astro" class="btn-data px-4 py-2 rounded">Analisis de Datos</a>
+    </div>
+
 
     <div class="grid mx-auto gap-6 mb-8 xl:grid-cols-4 xl:w-4/5 lg:grid-cols-3 md:w-[85%] md:grid-cols-2 xs:grid-cols-1 xs:w-[90%]">
       {projects.map((card) => (
@@ -26,6 +31,20 @@ import ProjectCard from '../components/ProyectosCards.astro';
       background-color: #FF4AC4;
       color: white;
       padding: 2rem;
+    }
+    .btn-dev {
+      background-color: #0032A0;;
+    }
+    .btn-dev:hover {
+      background-color: #032b82;;
+    }
+    .btn-data {
+      background-color: #EDFF44;
+      color: #0032A0;
+    }
+    .btn-data:hover {
+      background-color: #c0d033;
+      color: #0032A0;
     }
   </style>
 </Layout>

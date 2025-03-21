@@ -2,71 +2,102 @@
 import Layout from "../layouts/Layout.astro";
 
 const sponsors = [
-  { name: "Warner Music México", logo: "/Portfolio_ChristianLara/src/assets/logos/image.png", url: "https://www.dosequis.mx/" },
-  { name: "American Eagle", logo: "/logos/american-eagle.png", url: "https://www.ae.com/" },
-  { name: "Banamex", logo: "/logos/banamex.png", url: "https://www.banamex.com/" },
-  { name: "Aeromexico", logo: "/logos/aeromexico.png", url: "https://www.aeromexico.com/" },
-  { name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" }
+  { category: "Intern", name: "Warner Music México", logo: "/image.png", url: "https://www.warnermusic.com.mx/" },
+  { category: "Intern", name: "American Eagle", logo: "/logos/american-eagle.png", url: "https://www.ae.com/" },
+  { category: "Voluntariado", name: "Banamex", logo: "/logos/banamex.png", url: "https://www.banamex.com/" },
+  { category: "Voluntariado", name: "Aeromexico", logo: "/logos/aeromexico.png", url: "https://www.aeromexico.com/" },
+  { category: "Hackathones", name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" },
+  { category: "Hackathones", name: "Banamex", logo: "/logos/banamex.png", url: "https://www.banamex.com/" },
+  { category: "Organizaciones", name: "Aeromexico", logo: "/logos/aeromexico.png", url: "https://www.aeromexico.com/" },
+  { category: "Organizaciones", name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" }
 ];
-import ImageLogo from "../assets/logos/image.png";
+
+const categories = ["Intern", "Voluntariado", "Hackathones", "Organizaciones"];
 ---
+
 <Layout title="Currículum">
-    <section class="sponsors-section">
-        <h2 class="font-extra-bold">¡GRACIAS POR CONFIAR EN MÍ!</h2>
-        <div class="sponsors-grid">
-          {sponsors.map((sponsor) => (
-            <a href={sponsor.url} target="_blank" class="sponsor-card">
-              <img src={ImageLogo.src} alt={sponsor.name} />
-              <p>{sponsor.url}</p>
-            </a>
-          ))}
+  <section class="sponsors-section">
+    <h2 class="title">¡GRACIAS POR CONFIAR EN MÍ!</h2>
+
+    <div class="sponsors-grid">
+      {categories.map((category) => (
+        <div class="category-group">
+          <h3>{category}</h3>
+          {sponsors
+            .filter((sponsor) => sponsor.category === category)
+            .map((sponsor) => (
+              <a href={sponsor.url} target="_blank" class="sponsor-card">
+                <img src={sponsor.logo} alt={sponsor.name} />
+                <p>{sponsor.name}<br />{sponsor.url}</p>
+              </a>
+            ))}
         </div>
-      </section>
-      
-      <style>
-        .sponsors-section {
-          background: #ff4c0c;
-          text-align: center;
-          padding: 40px;
-        }
-      
-        .sponsors-section h2 {
-          color: rgb(255, 255, 255);
-          font-size: 2rem;
-          margin-bottom: 20px;
-        }
-      
-        .sponsors-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 15px;
-          justify-content: center;
-        }
-      
-        .sponsor-card {
-          background: #e31c0e;
-          padding: 20px;
-          border-radius: 10px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          transition: transform 0.3s ease-in-out;
-          text-decoration: none;
-        }
-      
-        .sponsor-card img {
-          max-width: 100px;
-          height: auto;
-          margin-bottom: 10px;
-        }
-      
-        .sponsor-card p {
-          color: rgb(0, 0, 0);
-          font-size: 0.8rem;
-        }
-      
-        .sponsor-card:hover {
-          transform: scale(1.05);
-        }
-      </style>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    .sponsors-section {
+      background: #ff4c0c;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .title {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .sponsors-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .category-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .category-group h3 {
+      width: 100%;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .sponsor-card {
+      background: #ff0404;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease-in-out;
+      text-decoration: none;
+      width: 150px;
+    }
+
+    .sponsor-card img {
+      max-width: 70px;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    .sponsor-card p {
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    .sponsor-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </Layout>

@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Habilidades">
+  <div class="skills bg-yellow-300 text-blue-600 p-6">
+    <h1 class="hab font-bold text-center mb-6">HABILIDADES</h1>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+      
+      <div class="mb-7 bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold">Lenguajes de programación</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <img src="/src/components/icons/programacion/python.svg" alt="Python" class="w-16 h-16" />
+          <img src="/src/components/icons/programacion/js.svg" alt="JavaScript" class="w-16 h-16" />
+          <img src="/src/components/icons/programacion/java.svg" alt="Java" class="w-16 h-16" />
+          <img src="/src/components/icons/programacion/c.svg" alt="C" class="w-16 h-16" />
+          <img src="/src/components/icons/programacion/php.svg" alt="php" class="w-20 h-20" />
+        </div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="mb-6 text-2xl font-semibold mb-4">Análisis de Datos</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <img src="/src/components/icons/datos/excel.svg" alt="Excel" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/mysql.svg" alt="Mysql" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/python.svg" alt="Python" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/powerbi.svg" alt="PowerBi" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/tableau.svg" alt="Tableau" class="w-20 h-20" />
+          <img src="/src/components/icons/datos/pandas.svg" alt="Pandas" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/seaborn.svg" alt="Seaborn" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/matplotlib.svg" alt="Matplotlib" class="w-16 h-16" />
+          <img src="/src/components/icons/datos/jupyter.svg" alt="Jupyter" class="w-16 h-16" />
+        </div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="mb-6 text-2xl font-semibold mb-4">Desarrollo</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <img src="/src/components/icons/dev/html.svg" alt="HTML" class="w-16 h-16" />
+          <img src="/src/components/icons/dev/css.svg" alt="CSS" class="w-16 h-16" />
+          <img src="/src/components/icons/dev/react.svg" alt="React" class="w-16 h-16" />
+          <img src="/src/components/icons/dev/astro.svg" alt="Astro" class="w-16 h-16" />
+          <img src="/src/components/icons/dev/nodejs.svg" alt="Node Js" class="w-16 h-16" />
+          <img src="/src/components/icons/dev/tailwind.svg" alt="Tailwind" class="w-16 h-16" />
+        </div>
+      </div>
+
+      <div class="mb-6 bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">Herramientas</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <img src="/src/components/icons/tools/git.svg" alt="Git" class="w-16 h-16" />
+          <img src="/src/components/icons/tools/github.svg" alt="GitHub" class="w-16 h-16" />
+          <img src="/src/components/icons/tools/docker.svg" alt="Docker" class="w-16 h-16" />
+          <img src="/src/components/icons/tools/debian.svg" alt="Debian" class="w-16 h-16" />
+          <img src="/src/components/icons/tools/Figma.svg" alt="Figma" class="w-16 h-16" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    .skills {
+      background: #f0fc44;
+    }
+    .hab {
+        font-size: 2rem;
+        margin-top: 3.5rem;
+        margin-bottom: 3rem;
+    }
+  </style>
+</Layout>

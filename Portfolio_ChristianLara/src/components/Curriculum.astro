@@ -2,17 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 
 const sponsors = [
-  { category: "Intern", name: "Warner Music México", logo: "/image.png", url: "https://www.warnermusic.com.mx/" },
-  { category: "Intern", name: "American Eagle", logo: "/logos/american-eagle.png", url: "https://www.ae.com/" },
-  { category: "Voluntariado", name: "Banamex", logo: "/logos/banamex.png", url: "https://www.banamex.com/" },
-  { category: "Voluntariado", name: "Aeromexico", logo: "/logos/aeromexico.png", url: "https://www.aeromexico.com/" },
-  { category: "Hackathones", name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" },
-  { category: "Hackathones", name: "Banamex", logo: "/logos/banamex.png", url: "https://www.banamex.com/" },
-  { category: "Organizaciones", name: "Aeromexico", logo: "/logos/aeromexico.png", url: "https://www.aeromexico.com/" },
-  { category: "Organizaciones", name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" }
+  { category: "INTERN", name: "Warner Music México", logo: "/src/assets/logos/wmm.png", url: "https://www.warnermusic.com.mx/" },
+  { category: "VOLUNTARIADO", name: "CNU - Centro de Negocios Universitarios, UNAM", logo: "/src/assets/logos/cnu.png", url: "https://www.banamex.com/" },
+  { category: "VOLUNTARIADO", name: "DIMEI", logo: "/src/assets/logos/dimei.png", url: "https://www.ingenieria.unam.mx/dimei/" },
+  { category: "HACKATHONES", name: "Banorte", logo: "/src/assets/logos/banorte.png", url: "https://www.banorte.com/" },
+  { category: "HACKATHONES", name: "AngelHack Global", logo: "/src/assets/logos/hack.png", url: "https://angelhack.com/" },
+  { category: "ORGANIZACIONES", name: "University Esports", logo: "/src/assets/logos/esports.png", url: "https://universityesports.lat/" },
+  { category: "ORGANIZACIONES", name: "Spotify", logo: "/logos/spotify.png", url: "https://www.spotify.com/" }
 ];
 
-const categories = ["Intern", "Voluntariado", "Hackathones", "Organizaciones"];
+const categories = ["INTERN", "VOLUNTARIADO", "HACKATHONES", "ORGANIZACIONES"];
 ---
 
 <Layout title="Currículum">
@@ -22,7 +21,7 @@ const categories = ["Intern", "Voluntariado", "Hackathones", "Organizaciones"];
     <div class="sponsors-grid">
       {categories.map((category) => (
         <div class="category-group">
-          <h3>{category}</h3>
+          <h3 class="cat"> {category} </h3>
           {sponsors
             .filter((sponsor) => sponsor.category === category)
             .map((sponsor) => (
@@ -38,66 +37,68 @@ const categories = ["Intern", "Voluntariado", "Hackathones", "Organizaciones"];
 
   <style>
     .sponsors-section {
-      background: #ff4c0c;
+      background: #1864fc;
       text-align: center;
       padding: 40px;
     }
 
     .title {
       color: white;
-      font-size: 2.5rem;
+      margin-top: 2.5rem;
+      font-weight: bolder;
+      font-size: 3.5rem;
       margin-bottom: 30px;
     }
 
+    .cat{
+      color: white;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      margin-bottom: 20px;
+    }
     .sponsors-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      max-width: 1000px;
+      gap: 90px; /* Mayor separación entre columnas */
+      row-gap: 60px; /* Más espacio entre filas */
+      max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .category-group {
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-      text-align: center;
-    }
-
-    .category-group h3 {
-      width: 100%;
-      font-size: 1.5rem;
-      color: white;
-      margin-bottom: 5px;
+      align-items: stretch; /* Asegura que los cuadros se alineen bien en filas */
     }
 
     .sponsor-card {
       background: #ff0404;
-      padding: 20px;
-      border-radius: 10px;
+      margin-bottom: 30px;
+      padding: 50px;
+      border-radius: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
       transition: transform 0.2s ease-in-out;
       text-decoration: none;
-      width: 150px;
+      width: 300px;
+      height: 300px;
+      border: 3px solid white;
     }
 
     .sponsor-card img {
-      max-width: 70px;
+      max-width: 120px;
       height: auto;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     .sponsor-card p {
       color: white;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      text-align: center;
     }
 
     .sponsor-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
-  </style>
+</style>
+
+
 </Layout>

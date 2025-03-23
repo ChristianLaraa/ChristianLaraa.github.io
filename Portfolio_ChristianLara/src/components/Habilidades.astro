@@ -1,15 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { technologies, data } from '../assets/data';
+import SkillsCards from './HabilidadesCards.astro';
 ---
 
 <Layout title="Habilidades">
-  <div class="skills bg-yellow-300 text-blue-600 p-6">
+ <!--<div class="skills bg-yellow-300 text-blue-600 p-6">
     <h1 class="hab font-bold text-center mb-6">HABILIDADES</h1>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
       
-      <div class="mb-7 bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-semibold">Lenguajes de programación</h2>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6">Lenguajes de programación</h2>
         <div class="flex flex-wrap justify-center gap-4">
           <img src="/src/components/icons/programacion/python.svg" alt="Python" class="w-16 h-16" />
           <img src="/src/components/icons/programacion/js.svg" alt="JavaScript" class="w-16 h-16" />
@@ -20,22 +22,18 @@ import Layout from "../layouts/Layout.astro";
       </div>
       
       <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="mb-6 text-2xl font-semibold mb-4">Análisis de Datos</h2>
+        <h2 class="mb-6 text-2xl font-semibold">Análisis de Datos</h2>
         <div class="flex flex-wrap justify-center gap-4">
           <img src="/src/components/icons/datos/excel.svg" alt="Excel" class="w-16 h-16" />
           <img src="/src/components/icons/datos/mysql.svg" alt="Mysql" class="w-16 h-16" />
           <img src="/src/components/icons/datos/python.svg" alt="Python" class="w-16 h-16" />
           <img src="/src/components/icons/datos/powerbi.svg" alt="PowerBi" class="w-16 h-16" />
           <img src="/src/components/icons/datos/tableau.svg" alt="Tableau" class="w-20 h-20" />
-          <img src="/src/components/icons/datos/pandas.svg" alt="Pandas" class="w-16 h-16" />
-          <img src="/src/components/icons/datos/seaborn.svg" alt="Seaborn" class="w-16 h-16" />
-          <img src="/src/components/icons/datos/matplotlib.svg" alt="Matplotlib" class="w-16 h-16" />
-          <img src="/src/components/icons/datos/jupyter.svg" alt="Jupyter" class="w-16 h-16" />
         </div>
       </div>
       
       <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="mb-6 text-2xl font-semibold mb-4">Desarrollo</h2>
+        <h2 class="mb-6 text-2xl font-semibold">Desarrollo</h2>
         <div class="flex flex-wrap justify-center gap-4">
           <img src="/src/components/icons/dev/html.svg" alt="HTML" class="w-16 h-16" />
           <img src="/src/components/icons/dev/css.svg" alt="CSS" class="w-16 h-16" />
@@ -46,10 +44,10 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <div class="mb-6 bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-semibold mb-4">Herramientas</h2>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="mb-6 text-2xl font-semibold">Herramientas</h2>
         <div class="flex flex-wrap justify-center gap-4">
-          <img src="/src/components/icons/tools/git.svg" alt="Git" class="w-16 h-16" />
+          <img src="/src/components/icons/tools/git.svg" alt="Git" class="w-20 h-20 mt-2" />
           <img src="/src/components/icons/tools/github.svg" alt="GitHub" class="w-16 h-16" />
           <img src="/src/components/icons/tools/docker.svg" alt="Docker" class="w-16 h-16" />
           <img src="/src/components/icons/tools/debian.svg" alt="Debian" class="w-16 h-16" />
@@ -59,6 +57,111 @@ import Layout from "../layouts/Layout.astro";
 
     </div>
   </div>
+ --> 
+<div class = "skills2">
+  <div
+  class="w-[75%] mx-auto mb-10"
+  data-tech-h1
+>
+  <h2 class="cursor-pointer font-bold w-fit md:mx-0 md:ml-5 sm:text-6xl xs:text-[40px] xs:mx-auto">Habilidades</h2>
+</div>
+
+<!--=============== Slider ===============-->
+<h2 class="cursor-pointer font-bold w-fit md:mx-0 md:ml-5 sm:text-4xl xs:text-[40px] xs:mx-auto">Lenguajes de Programación</h2>
+<div
+  class="overflow-x-hidden whitespace-nowrap cursor-pointer"
+  data-tech-wrapper
+>
+  <div class="tech-card inline-block">
+     {
+        technologies.map((tech) => (
+           <div class="inline-block m-0">
+              <SkillsCards
+                 text={tech.text}
+                 logo={tech.logo}
+              />
+           </div>
+        ))
+     }
+  </div>
+</div>
+
+
+
+<!--=============== Modal ===============-->
+<div 
+  class=" w-screen h-screen bg-black/70 fixed top-0 left-0 z-[100] justify-center items-center hidden"
+  data-tech-modal
+>
+  <div
+     class="modal-tech tech-modal w-4/5 h-[70%] overflow-y-auto flex flex-wrap justify-center items-center gap-x-5 gap-y-4 bg-violet-600"
+     data-tech-stop
+  >
+     {
+        technologies.map((tech) => (
+           <div class="inline-block m-0">
+              <SkillsCards
+                 text={tech.text}
+                 logo={tech.logo}
+              />
+           </div>
+        ))
+     }
+  </div>
+</div>
+
+
+<!--=============== Data ===============-->
+<div
+class="w-[75%] mx-auto mb-10" data-tech-h1>
+</div>
+<h2 class="cursor-pointer font-bold w-fit md:mx-0 md:ml-5 sm:text-4xl xs:text-[40px] xs:mx-auto">Analisis de Datos</h2>
+<div
+class="overflow-x-hidden whitespace-nowrap cursor-pointer"
+data-tech-wrapper
+>
+<div class="tech-card inline-block">
+   {
+      data.map((data) => (
+         <div class="inline-block m-0">
+            <SkillsCards
+               text={data.text}
+               logo={data.logo}
+            />
+         </div>
+      ))
+   }
+</div>
+</div>
+
+
+
+<!--=============== Data ===============-->
+<div 
+class=" w-screen h-screen bg-black/70 fixed top-0 left-0 z-[100] justify-center items-center hidden"
+data-tech-modal
+>
+<div
+   class="modal-tech tech-modal w-4/5 h-[70%] overflow-y-auto flex flex-wrap justify-center items-center gap-x-5 gap-y-4 bg-violet-600"
+   data-tech-stop
+>
+   {
+      data.map((data) => (
+         <div class="inline-block m-0">
+            <SkillsCards
+               text={data.text}
+               logo={data.logo}
+            />
+         </div>
+      ))
+   }
+</div>
+</div>
+
+
+
+
+        </div>
 
   <style>
     .skills {
@@ -68,6 +171,15 @@ import Layout from "../layouts/Layout.astro";
         font-size: 2rem;
         margin-top: 3.5rem;
         margin-bottom: 3rem;
+    }
+
+    .skills2 {
+        background: #f0fc44;
+        color: #0032A0;
+    }
+    .modal-tech {
+        background: #f0fc44;
+        color: #0032A0;
     }
   </style>
 </Layout>

@@ -1,6 +1,31 @@
 export const socials = [{ logo: 'bx bxl-linkedin-square' }, { logo: 'bx bxl-instagram' }, { logo: 'bx bxl-github' }];
 
 export const info = [{ text: 'About' }, { text: 'Projects' }];
+export const technologies = [
+    { text: 'JavaScript', logo: 'bx bxl-javascript' },
+    { text: 'Python', logo: 'bx bxl-python' },
+    { text: 'Java', logo: 'bx bxl-java'},
+    { text: 'Php', logo: 'bx bxl-php'}
+];
+
+export const data = [
+    { text: 'Excel', logo: 'bx bxl-excel' },
+    { text: 'Python', logo: 'bx bxl-python' },
+    { text: 'Tableau', logo: 'bx bxl-tableau' },
+    { text: 'Sql', logo: 'bx bxl-mysql'}
+];
+
+export const tools = [
+    { text: 'VS Code', logo: 'bx bxl-visual-studio' },
+    { text: 'Git', logo: 'bx bxl-git' },
+    { text: 'Figma', logo: 'bx bxl-figma' },
+];
+
+export const frameworks = [
+    { text: 'Next.js', logo: 'bx bxl-nextjs' },
+    { text: 'Tailwind CSS', logo: 'bx bxl-tailwind-css' },
+    { text: 'Node.js', logo: 'bx bxl-nodejs' },
+];
 
 export const projects = [
    {

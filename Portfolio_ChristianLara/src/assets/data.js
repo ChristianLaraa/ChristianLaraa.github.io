@@ -9,10 +9,9 @@ export const technologies = [
 ];
 
 export const data = [
-    { text: 'Excel', logo: 'bx bxl-excel' },
-    { text: 'Python', logo: 'bx bxl-python' },
-    { text: 'Tableau', logo: 'bx bxl-tableau' },
-    { text: 'Sql', logo: 'bx bxl-mysql'}
+    { text: 'Excel', logo: 'bx bxs-chat' },
+    { text: 'Leadership', logo: 'bx bxs-group' },
+    { text: 'Creativity', logo: 'bx bxs-bulb' },
 ];
 
 export const tools = [

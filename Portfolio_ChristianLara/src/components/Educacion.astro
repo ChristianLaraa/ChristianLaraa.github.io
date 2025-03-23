@@ -1,10 +1,91 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-<layout title = "Educacion">
+<Layout title = "Educacion">
 
-<h1> EDUCACIÓN </h1>
+    <section class="educacion overflow-hidden bg-black pt-14 pb-32 space-y-24" id="projects">
+        <div class="self-stretch overflow-hidden flex flex-row items-center justify-center py-5 px-0 gap-[16px] ">
+            <h2 class=" text-white py-5 text-4xl font-bold sm:text-4xl md:text-5xl"><span class="font-medium">My</span> Projects</h2>
+        </div>
+        <!-- project -->
+         <!-- project 02 -->
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+                    <div>
+                        <h3 class="text-2xl font-bold tracking-tight text-white">
+                            02
+                        </h3>
+                        <div class="mt-6">
+                            <h2 class="text-3xl font-bold tracking-tight text-white">
+                                Euphoria - Ecommerce (Apparels) Website Template
+                            </h2>
+                            <p class="mt-4 text-lg text-zinc-500 sm:text-sm">
+                                Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to
+                                specimen book.
+                            </p>
+                            <div class="mt-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <img class="social-icon" alt="read-more" src="/read-more.svg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 sm:mt-16 lg:mt-0">
+                    <div class="mx-4 md:mx-2 lg:relative lg:m-0 lg:h-full lg:px-0">
+                        <img alt="Project 02" loading="lazy"
+                            class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                            style="color:transparent" src="/image-770@2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- project 3 -->
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
+                    <div>
+                        <h3 class="text-2xl font-bold tracking-tight text-white">
+                            03
+                        </h3>
+                        <div class="mt-6">
+                            <h2 class="text-3xl font-bold tracking-tight text-white">
+                                Blog Website Template
+                            </h2>
+                            <p class="mt-4 text-lg text-zinc-500 sm:text-sm">
+                                Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to
+                                specimen book.
+                            </p>
+                            <div class="mt-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <img class="social-icon" alt="read-more" src="/read-more.svg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 sm:mt-16 lg:mt-0">
+                    <div class="mx-4 md:mx-2 lg:relative lg:m-0 lg:h-full lg:px-0">
+                        <img loading="lazy" alt="Project 03"
+                            class="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                            style="color:transparent"
+                            src="/image-770@2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
-</layout>
+    <style>
+        .educacion {
+            background-color: #ff0000;
+            color: rgb(255, 255, 255);
+        }
+</Layout>

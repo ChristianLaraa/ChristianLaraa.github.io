@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ImageUni from "/Users/christianlara/Desktop/Portafolio/Portfolio_ChristianLara/public/fesa.png"
 ---
 <Layout title = "Educacion">
 
     <section class="educacion overflow-hidden bg-black pt-14 pb-32 space-y-24" id="projects">
         <div class="self-stretch overflow-hidden flex flex-row items-center justify-center py-5 px-0 gap-[16px] ">
-            <h2 class=" text-white py-5 text-4xl font-bold sm:text-4xl md:text-5xl"><span class="font-medium">My</span> Projects</h2>
+            <h2 class=" text-white py-5 text-4xl font-bold sm:text-4xl md:text-5xl"><span class="font-bold">EDUCACIÓN</h2>
         </div>
         <!-- project -->
          <!-- project 02 -->
@@ -18,9 +19,9 @@ import Layout from "../layouts/Layout.astro";
                         </h3>
                         <div class="mt-6">
                             <h2 class="text-3xl font-bold tracking-tight text-white">
-                                Euphoria - Ecommerce (Apparels) Website Template
+                                UNAM - FES Aragón - Ingeniería en Computación
                             </h2>
-                            <p class="mt-4 text-lg text-zinc-500 sm:text-sm">
+                            <p class="mt-4 text-lg text-black font-bold sm:text-sm">
                                 Lorem Ipsum is simply dummy text of the
                                 printing and typesetting industry. Lorem Ipsum has been the
                                 industry's standard dummy text ever since the 1500s, when an
@@ -29,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
                             </p>
                             <div class="mt-6">
                                 <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <img class="social-icon" alt="read-more" src="/read-more.svg" />
+                                    <img class="social-icon" alt="read-more" src={ImageUni.src} />
                                 </a>
                             </div>
                         </div>
@@ -85,7 +86,7 @@ import Layout from "../layouts/Layout.astro";
 
     <style>
         .educacion {
-            background-color: #ff0000;
+            background-color: #ff0404;
             color: rgb(255, 255, 255);
         }
 </Layout>
